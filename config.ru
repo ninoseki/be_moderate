@@ -3,8 +3,6 @@ require 'bundler/setup'
 require 'rack'
 require 'sinatra'
 
-get '/' do
-  "Be Moderate"
-end
+require_relative './app/main'
 
 run Sinatra::Application

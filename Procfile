@@ -1,2 +1,2 @@
 # Procfile
-web: bundle exec rackup config.ru -P $PORT
+web: bundle exec rackup config.ru -p $PORT

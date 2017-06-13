@@ -2,9 +2,10 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'dalli'
-gem 'poltergeist'
+gem 'rest-client'
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'washbullet'
 
 group :test, :development do
   gem 'rake'

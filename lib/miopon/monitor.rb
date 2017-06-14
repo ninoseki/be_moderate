@@ -15,7 +15,7 @@ module Miopon
 
       @miopon_client = Client.new
       @pushbullet_client = Washbullet::Client.new(@pushbullet_api_key)
-      @memcache_client = Dalli.client.new
+      @memcache_client = memcached_client
     end
 
     def memcached_client
@@ -38,13 +38,13 @@ module Miopon
     end
 
     def over_limit_lines
-      mipon_client.latest_packet_usages.select do |line|
+      miopon_client.latest_packet_usages.select do |line|
         line.with_coupon >= PACKET_USAGE_LIMIT
       end
     end
 
     def already_notified?(code)
-      memcached_client.get(code)
+      !memcached_client.get(code).nil?
     end
 
     def mark_as_notified(code)

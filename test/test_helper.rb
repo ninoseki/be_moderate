@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 require 'minitest/spec'
 require 'minitest/autorun'
+require 'mocha/mini_test'
 require 'rack/test'
 require 'vcr'
 
@@ -15,3 +16,5 @@ end
 
 ENV["IIJMIO_DEVELOPER_ID"] = "xxx"
 ENV["IIJMIO_AUTHORIZATION"] = "xxx"
+ENV["PUSHBULLET_API_KEY"] = "xxx"
+ENV["PUSHBULLET_IDENTIFIER"] = "xxx"

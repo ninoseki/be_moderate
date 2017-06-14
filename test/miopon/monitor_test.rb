@@ -11,15 +11,32 @@ describe "Miopon::Monitor" do
     end
   end
 
-  describe "#already_notified?" do
+  describe "use dalli client cases" do
     before do
       client = mock
       client.expects(:get).returns(nil)
       Dalli::Client.stubs(:new).returns(client)
     end
-    it "should return false" do
-      monitor = Miopon::Monitor.new
-      monitor.already_notified?("xxx").must_equal false
+
+    describe "#already_notified?" do
+      it "should return false" do
+        monitor = Miopon::Monitor.new
+        monitor.already_notified?("xxx").must_equal false
+      end
+    end
+
+    describe "#notify" do
+      it "should push note by using Pushbullet API" do
+        monitor = Miopon::Monitor.new
+        line = Struct.new(:code, :with_coupon).new("hoge", 301)
+
+        VCR.use_cassette("pushbullet_push_note") do
+          push = monitor.notify line
+          push.type.must_equal "note"
+          push.body["title"].must_equal "A notice from Be Moderate"
+          push.body["body"].must_equal "hoge uses 301MB today!"
+        end
+      end
     end
   end
 end

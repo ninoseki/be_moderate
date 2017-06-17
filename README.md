@@ -1,9 +1,10 @@
 # be_moderate
+[![Build Status](https://travis-ci.org/ninoseki/be_moderate.svg?branch=master)](https://travis-ci.org/ninoseki/be_moderate)
+[![Code Climate](https://codeclimate.com/github/ninoseki/be_moderate/badges/gpa.svg)](https://codeclimate.com/github/ninoseki/be_moderate)
 
 ## A Problem to be solved
 Sometimes there is a traffic spike on my IIJMio mobile lines.
-
-I want to limit traffic usage of a modile line when the line's data traffic over 500MB/day.
+I need a notice or automate traffic shaping.
 
 ## Implementation ideas
 * Use [IIJMio Coupon Swith API](https://www.iijmio.jp/hdd/coupon/mioponapi.jsp).

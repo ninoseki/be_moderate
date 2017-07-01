@@ -31,6 +31,12 @@ module Miopon
       )
     end
 
+    def stats
+      miopon_client.latest_packet_usages.each do |line|
+        puts "#{line.date}: #{line.code} uses #{line.with_coupon}MB"
+      end
+    end
+
     def check_packet_usages
       over_limit_lines.each do |line|
         line.with_coupon >= PACKET_USAGE_LIMIT

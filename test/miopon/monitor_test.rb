@@ -11,6 +11,16 @@ describe "Miopon::Monitor" do
     end
   end
 
+  describe "#stats" do
+    it "should output packet usage of each line" do
+      monitor = Miopon::Monitor.new
+      VCR.use_cassette("packet_info") do
+        out, _ = capture_io { monitor.stats }
+        out.lines.length.must_equal 4
+      end
+    end
+  end
+
   describe "use dalli client cases" do
     before do
       client = mock

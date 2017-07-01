@@ -32,8 +32,10 @@ module Miopon
     end
 
     def stats
-      miopon_client.latest_packet_usages.each do |line|
-        puts "#{line.date}: #{line.code} uses #{line.with_coupon}MB"
+      [].tap do |out|
+        miopon_client.latest_packet_usages.each do |line|
+          out << "#{line.date}: #{line.code} uses #{line.with_coupon}MB"
+        end
       end
     end
 

@@ -9,5 +9,7 @@ with_error_notify do
     monitor.notify line
   end
   # stats
-  monitor.stats
+  monitor.stats.each do |s|
+    puts s
+  end
 end

@@ -38,12 +38,6 @@ module Miopon
       end
     end
 
-    def check_packet_usages
-      over_limit_lines.each do |line|
-        line.with_coupon >= @packet_usage_limit
-      end
-    end
-
     def over_limit_lines
       miopon_client.latest_packet_usages.select do |line|
         line.with_coupon >= @packet_usage_limit

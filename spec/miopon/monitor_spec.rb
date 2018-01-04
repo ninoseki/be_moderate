@@ -6,7 +6,7 @@ describe "Miopon::Monitor", vcr: vcr_options do
   describe "#check_packet_usages" do
     it "should return violated lines only" do
       monitor = Miopon::Monitor.new
-      lines = monitor.check_packet_usages
+      lines = monitor.over_limit_lines
       expect(lines.length).to eq(1)
     end
   end

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 
 gem 'dalli'
+gem 'dotenv'
 gem 'rest-client'
 gem 'rollbar'
 gem 'sinatra'
@@ -13,9 +14,9 @@ group :test, :development do
 end
 
 group :test do
-  gem 'minitest'
   gem 'mocha'
   gem "rack-test"
+  gem "rspec"
   gem "vcr"
   gem 'webmock'
 end

@@ -1,4 +1,4 @@
-require_relative "../test_helper"
+require_relative "../spec_helper"
 
 describe "Miopon::Utils" do
   describe "#with_error_notify" do
@@ -9,7 +9,7 @@ describe "Miopon::Utils" do
       res = with_error_notify do
         raise StandardError, "hoge"
       end
-      res.must_equal "Rollbar.error has called"
+      expect(res).to eq("Rollbar.error has called")
     end
   end
 end

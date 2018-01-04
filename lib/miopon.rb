@@ -1,3 +1,5 @@
+require 'dotenv/load'
+
 require_relative 'miopon/client'
 require_relative 'miopon/monitor'
 require_relative 'miopon/packet'

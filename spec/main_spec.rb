@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 describe "Main" do
   include Rack::Test::Methods
@@ -9,6 +9,6 @@ describe "Main" do
 
   it '/' do
     get '/'
-    last_response.body.must_include "Be Moderate"
+    expect(last_response.body).to include("Be Moderate")
   end
 end

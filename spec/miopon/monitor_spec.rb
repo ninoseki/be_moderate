@@ -1,22 +1,20 @@
-require_relative "../test_helper"
+require_relative "../spec_helper"
 
-describe "Miopon::Monitor" do
+vcr_options = { cassette_name: "log_packet" }
+
+describe "Miopon::Monitor", vcr: vcr_options do
   describe "#check_packet_usages" do
     it "should return violated lines only" do
       monitor = Miopon::Monitor.new
-      VCR.use_cassette("packet_info") do
-        lines = monitor.check_packet_usages
-        lines.length.must_be :==, 1
-      end
+      lines = monitor.check_packet_usages
+      expect(lines.length).to eq(1)
     end
   end
 
   describe "#stats" do
     it "should output packet usage of each line" do
       monitor = Miopon::Monitor.new
-      VCR.use_cassette("packet_info") do
-        monitor.stats.length.must_equal 4
-      end
+      expect(monitor.stats.length).to eq(5)
     end
   end
 
@@ -30,7 +28,7 @@ describe "Miopon::Monitor" do
     describe "#already_notified?" do
       it "should return false" do
         monitor = Miopon::Monitor.new
-        monitor.already_notified?("xxx").must_equal false
+        expect(monitor.already_notified?("xxx")).to be_falsey
       end
     end
 
@@ -41,9 +39,9 @@ describe "Miopon::Monitor" do
 
         VCR.use_cassette("pushbullet_push_note") do
           push = monitor.notify line
-          push.type.must_equal "note"
-          push.body["title"].must_equal "A notice from Be Moderate"
-          push.body["body"].must_equal "hoge uses 301MB today!"
+          expect(push.type).to eq("note")
+          expect(push.body["title"]).to eq("A notice from Be Moderate")
+          expect(push.body["body"]).to eq("hoge uses 301MB today!")
         end
       end
     end

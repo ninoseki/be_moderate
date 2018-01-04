@@ -1,10 +1,5 @@
-require 'rake/testtask'
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.libs << 'lib'
-  t.warning = false
-  t.test_files = FileList['test/**/*_test.rb']
-end
-
-task default: :test
+task test: :spec
+task default: :spec

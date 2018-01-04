@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.pushbullet.com/v2/pushes
+    body:
+      encoding: UTF-8
+      string: body=hoge+uses+301MB+today%21&email=zgok0079%40gmail.com&title=A+notice+from+Be+Moderate&type=note
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Washbullet Ruby Gem 0.4.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Bearer <CENSORED/>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Reset:
+      - '1515048639'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Limit:
+      - '16384'
+      X-Ratelimit-Remaining:
+      - '16384'
+      X-Cloud-Trace-Context:
+      - 30087ca06aa17a2fbf9adc207da1ba13
+      Date:
+      - Thu, 04 Jan 2018 06:19:43 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '490'
+    body:
+      encoding: UTF-8
+      string: '{"active":true,"iden":"ujDCFBtCk6CsjAsgUCtxF6","created":1.515046783728117e+09,"modified":1.5150467837412734e+09,"type":"note","dismissed":false,"direction":"self","sender_iden":"ujDCFBtCk6C","sender_email":"<CENSORED/>","sender_email_normalized":"<CENSORED/>","sender_name":"Manabu
+        Niseki","receiver_iden":"ujDCFBtCk6C","receiver_email":"<CENSORED/>","receiver_email_normalized":"<CENSORED/>","title":"A
+        notice from Be Moderate","body":"hoge uses 301MB today!"}'
+    http_version: 
+  recorded_at: Thu, 04 Jan 2018 06:19:43 GMT
+recorded_with: VCR 4.0.0

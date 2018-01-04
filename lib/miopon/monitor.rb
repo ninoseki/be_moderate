@@ -4,11 +4,10 @@ require 'dalli'
 module Miopon
   class Monitor
 
-    PACKET_USAGE_LIMIT = 300
-
-    attr_reader :miopon_client, :pushbullet_client, :pushbullet_identifier
+    attr_reader :miopon_client, :packet_usage_limit, :pushbullet_client, :pushbullet_identifier
 
     def initialize
+      @packet_usage_limit = ENV["IIJMIO_PACKET_USAGE_LIMIT"].to_i
       @pushbullet_api_key = ENV["PUSHBULLET_API_KEY"]
       @pushbullet_identifier = ENV["PUSHBULLET_IDENTIFIER"]
       raise ParameterError unless @pushbullet_api_key && @pushbullet_identifier
@@ -41,13 +40,19 @@ module Miopon
 
     def check_packet_usages
       over_limit_lines.each do |line|
-        line.with_coupon >= PACKET_USAGE_LIMIT
+        line.with_coupon >= @packet_usage_limit
       end
     end
 
     def over_limit_lines
       miopon_client.latest_packet_usages.select do |line|
-        line.with_coupon >= PACKET_USAGE_LIMIT
+        line.with_coupon >= @packet_usage_limit
+      end
+    end
+
+    def under_limit_lines
+      miopon_client.latest_packet_usages.reject do |line|
+        line.with_coupon >= @packet_usage_limit
       end
     end
 

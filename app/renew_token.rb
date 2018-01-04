@@ -1,5 +1,5 @@
 require 'uri'
-AUTHORIZATION = "https://api.iijmio.jp/mobile/d/v1/authorization/"
+AUTHORIZATION = "https://api.iijmio.jp/mobile/d/v1/authorization/".freeze
 
 params = {}
 params["response_type"] = "token"

@@ -11,7 +11,7 @@ module Miopon
     end
 
     def latest_packet_usages
-      [].tap do |arr|
+      @usages ||= [].tap do |arr|
         json["packetLogInfo"].each do |packet_info|
           packet_info["hdoInfo"].each do |hdo_info|
             arr << Line.new(hdo_info)
@@ -28,8 +28,13 @@ module Miopon
       last_day = hdo_info["packetLog"].last
       @date = last_day["date"]
       @with_coupon = last_day["withCoupon"].to_i
+      @packet_usage_limit = ENV["IIJMIO_PACKET_USAGE_LIMIT"].to_i
 
-      raise ParameterError unless (@code && @date && @with_coupon)
+      raise ParameterError unless @code && @date && @with_coupon
+    end
+
+    def coupon_payload
+      { "hdoServiceCode": @code, "couponUse": @with_coupon < @packet_usage_limit }
     end
   end
 end

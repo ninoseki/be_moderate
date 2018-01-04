@@ -7,7 +7,7 @@ describe "Miopon::Utils" do
       Rollbar.stubs(:error).returns "Rollbar.error has called"
 
       res = with_error_notify do
-        raise StandardError, "hoge"
+        raise RestClient::ExceptionWithResponse, "hoge"
       end
       expect(res).to eq("Rollbar.error has called")
     end

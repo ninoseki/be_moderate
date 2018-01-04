@@ -2,17 +2,22 @@ require_relative "../lib/miopon"
 
 include Miopon::Utils
 
-def job
+def monitor_job
   monitor = Miopon::Monitor.new
-  # notify
+
   monitor.over_limit_lines.each do |line|
     monitor.notify line
     monitor.mark_as_notified line.code
   end
-  # stats
-  monitor.stats.each do |s|
-    puts s
-  end
+  monitor.stats.each { |s| puts s }
 end
 
-with_error_notify { job }
+def coupon_job
+  client = Miopon::Client.new
+  client.coupon
+end
+
+with_error_notify do
+  monitor_job
+  coupon_job
+end

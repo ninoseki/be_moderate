@@ -18,8 +18,11 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
 
-  %w(IIJMIO_DEVELOPER_ID IIJMIO_AUTHORIZATION PUSHBULLET_API_KEY PUSHBULLET_IDENTIFIER).each do |k|
-    config.filter_sensitive_data("<CENSORED/>") { ENV[k] }
+  # comma-separeted IIJMIO identifiers (e.g. hdo000000000)
+  words = ENV["IIJMIO_IDENTIFIERS"].to_s.split(",")
+  words += %w(IIJMIO_DEVELOPER_ID IIJMIO_AUTHORIZATION PUSHBULLET_API_KEY PUSHBULLET_IDENTIFIER).map { |k| ENV[k] }
+  words.each do |w|
+    config.filter_sensitive_data("<CENSORED/>") { w }
   end
 
   config.before_record do |i|

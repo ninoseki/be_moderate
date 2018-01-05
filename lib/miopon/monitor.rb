@@ -3,7 +3,6 @@ require 'dalli'
 
 module Miopon
   class Monitor
-
     attr_reader :miopon_client, :packet_usage_limit, :pushbullet_client, :pushbullet_identifier
 
     def initialize

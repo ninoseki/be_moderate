@@ -1,8 +1,6 @@
 require_relative "../spec_helper"
 
-vcr_options = { cassette_name: "log_packet" }
-
-describe "Miopon::Monitor", vcr: vcr_options do
+describe "Miopon::Monitor", vcr: { cassette_name: "log_packet" } do
   describe "#check_packet_usages" do
     it "should return violated lines only" do
       monitor = Miopon::Monitor.new

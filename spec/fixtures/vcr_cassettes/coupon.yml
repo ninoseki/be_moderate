@@ -1,0 +1,217 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iijmio.jp/mobile/d/v2/log/packet/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.6.0 x86_64) ruby/2.4.1p111
+      X-Iijmio-Developer:
+      - "<CENSORED/>"
+      X-Iijmio-Authorization:
+      - "<CENSORED/>"
+      Host:
+      - api.iijmio.jp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Jan 2018 02:19:54 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-IIJmio-Developer,X-IIJmio-Authorization,X-IIJmio-Application,Content-Type
+      Access-Control-Allow-Methods:
+      - GET,PUT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"packetLogInfo": [{"hddServiceCode": "hdd11111111111", "hdoInfo": [{"hdoServiceCode":
+        "hdo1111111111", "packetLog": [{"date": "20171205", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20171206", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171207",
+        "withCoupon": 97, "withoutCoupon": 0}, {"date": "20171208", "withCoupon":
+        96, "withoutCoupon": 0}, {"date": "20171209", "withCoupon": 58, "withoutCoupon":
+        0}, {"date": "20171210", "withCoupon": 27, "withoutCoupon": 0}, {"date": "20171211",
+        "withCoupon": 136, "withoutCoupon": 0}, {"date": "20171212", "withCoupon":
+        39, "withoutCoupon": 0}, {"date": "20171213", "withCoupon": 198, "withoutCoupon":
+        16}, {"date": "20171214", "withCoupon": 67, "withoutCoupon": 130}, {"date":
+        "20171215", "withCoupon": 20, "withoutCoupon": 10}, {"date": "20171216", "withCoupon":
+        33, "withoutCoupon": 22}, {"date": "20171217", "withCoupon": 2, "withoutCoupon":
+        0}, {"date": "20171218", "withCoupon": 63, "withoutCoupon": 215}, {"date":
+        "20171219", "withCoupon": 23, "withoutCoupon": 45}, {"date": "20171220", "withCoupon":
+        8, "withoutCoupon": 92}, {"date": "20171221", "withCoupon": 0, "withoutCoupon":
+        90}, {"date": "20171222", "withCoupon": 0, "withoutCoupon": 79}, {"date":
+        "20171223", "withCoupon": 39, "withoutCoupon": 8}, {"date": "20171224", "withCoupon":
+        12, "withoutCoupon": 0}, {"date": "20171225", "withCoupon": 6, "withoutCoupon":
+        77}, {"date": "20171226", "withCoupon": 0, "withoutCoupon": 3}, {"date": "20171227",
+        "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171228", "withCoupon": 0,
+        "withoutCoupon": 0}, {"date": "20171229", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20171230", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171231",
+        "withCoupon": 0, "withoutCoupon": 0}, {"date": "20180101", "withCoupon": 0,
+        "withoutCoupon": 0}, {"date": "20180102", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20180103", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20180104",
+        "withCoupon": 0, "withoutCoupon": 0}]}, {"hdoServiceCode": "hdo1111111111",
+        "packetLog": [{"date": "20171205", "withCoupon": 12, "withoutCoupon": 0},
+        {"date": "20171206", "withCoupon": 4, "withoutCoupon": 0}, {"date": "20171207",
+        "withCoupon": 10, "withoutCoupon": 0}, {"date": "20171208", "withCoupon":
+        44, "withoutCoupon": 0}, {"date": "20171209", "withCoupon": 20, "withoutCoupon":
+        0}, {"date": "20171210", "withCoupon": 167, "withoutCoupon": 0}, {"date":
+        "20171211", "withCoupon": 29, "withoutCoupon": 0}, {"date": "20171212", "withCoupon":
+        1, "withoutCoupon": 0}, {"date": "20171213", "withCoupon": 12, "withoutCoupon":
+        0}, {"date": "20171214", "withCoupon": 33, "withoutCoupon": 0}, {"date": "20171215",
+        "withCoupon": 6, "withoutCoupon": 0}, {"date": "20171216", "withCoupon": 18,
+        "withoutCoupon": 0}, {"date": "20171217", "withCoupon": 5, "withoutCoupon":
+        0}, {"date": "20171218", "withCoupon": 31, "withoutCoupon": 0}, {"date": "20171219",
+        "withCoupon": 11, "withoutCoupon": 0}, {"date": "20171220", "withCoupon":
+        7, "withoutCoupon": 0}, {"date": "20171221", "withCoupon": 7, "withoutCoupon":
+        0}, {"date": "20171222", "withCoupon": 13, "withoutCoupon": 0}, {"date": "20171223",
+        "withCoupon": 115, "withoutCoupon": 0}, {"date": "20171224", "withCoupon":
+        235, "withoutCoupon": 0}, {"date": "20171225", "withCoupon": 10, "withoutCoupon":
+        0}, {"date": "20171226", "withCoupon": 8, "withoutCoupon": 0}, {"date": "20171227",
+        "withCoupon": 11, "withoutCoupon": 0}, {"date": "20171228", "withCoupon":
+        83, "withoutCoupon": 0}, {"date": "20171229", "withCoupon": 1, "withoutCoupon":
+        0}, {"date": "20171230", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171231",
+        "withCoupon": 10, "withoutCoupon": 0}, {"date": "20180101", "withCoupon":
+        1, "withoutCoupon": 0}, {"date": "20180102", "withCoupon": 64, "withoutCoupon":
+        0}, {"date": "20180103", "withCoupon": 2, "withoutCoupon": 0}, {"date": "20180104",
+        "withCoupon": 1, "withoutCoupon": 0}]}, {"hdoServiceCode": "hdo1111111111",
+        "packetLog": [{"date": "20171205", "withCoupon": 12, "withoutCoupon": 0},
+        {"date": "20171206", "withCoupon": 60, "withoutCoupon": 0}, {"date": "20171207",
+        "withCoupon": 36, "withoutCoupon": 0}, {"date": "20171208", "withCoupon":
+        14, "withoutCoupon": 0}, {"date": "20171209", "withCoupon": 20, "withoutCoupon":
+        0}, {"date": "20171210", "withCoupon": 2, "withoutCoupon": 0}, {"date": "20171211",
+        "withCoupon": 29, "withoutCoupon": 0}, {"date": "20171212", "withCoupon":
+        6, "withoutCoupon": 0}, {"date": "20171213", "withCoupon": 22, "withoutCoupon":
+        0}, {"date": "20171214", "withCoupon": 4, "withoutCoupon": 0}, {"date": "20171215",
+        "withCoupon": 78, "withoutCoupon": 0}, {"date": "20171216", "withCoupon":
+        2, "withoutCoupon": 0}, {"date": "20171217", "withCoupon": 14, "withoutCoupon":
+        0}, {"date": "20171218", "withCoupon": 4, "withoutCoupon": 0}, {"date": "20171219",
+        "withCoupon": 14, "withoutCoupon": 0}, {"date": "20171220", "withCoupon":
+        10, "withoutCoupon": 0}, {"date": "20171221", "withCoupon": 25, "withoutCoupon":
+        0}, {"date": "20171222", "withCoupon": 2, "withoutCoupon": 0}, {"date": "20171223",
+        "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171224", "withCoupon": 2,
+        "withoutCoupon": 0}, {"date": "20171225", "withCoupon": 6, "withoutCoupon":
+        0}, {"date": "20171226", "withCoupon": 3, "withoutCoupon": 0}, {"date": "20171227",
+        "withCoupon": 2, "withoutCoupon": 0}, {"date": "20171228", "withCoupon": 6,
+        "withoutCoupon": 0}, {"date": "20171229", "withCoupon": 1, "withoutCoupon":
+        0}, {"date": "20171230", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171231",
+        "withCoupon": 1, "withoutCoupon": 0}, {"date": "20180101", "withCoupon": 1,
+        "withoutCoupon": 0}, {"date": "20180102", "withCoupon": 21, "withoutCoupon":
+        0}, {"date": "20180103", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20180104",
+        "withCoupon": 1, "withoutCoupon": 0}]}, {"hdoServiceCode": "hdo1111111111",
+        "packetLog": [{"date": "20171205", "withCoupon": 0, "withoutCoupon": 0}, {"date":
+        "20171206", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171207", "withCoupon":
+        98, "withoutCoupon": 0}, {"date": "20171208", "withCoupon": 212, "withoutCoupon":
+        0}, {"date": "20171209", "withCoupon": 72, "withoutCoupon": 0}, {"date": "20171210",
+        "withCoupon": 229, "withoutCoupon": 0}, {"date": "20171211", "withCoupon":
+        236, "withoutCoupon": 0}, {"date": "20171212", "withCoupon": 164, "withoutCoupon":
+        0}, {"date": "20171213", "withCoupon": 153, "withoutCoupon": 0}, {"date":
+        "20171214", "withCoupon": 386, "withoutCoupon": 48}, {"date": "20171215",
+        "withCoupon": 0, "withoutCoupon": 47}, {"date": "20171216", "withCoupon":
+        0, "withoutCoupon": 41}, {"date": "20171217", "withCoupon": 0, "withoutCoupon":
+        164}, {"date": "20171218", "withCoupon": 415, "withoutCoupon": 53}, {"date":
+        "20171219", "withCoupon": 255, "withoutCoupon": 1}, {"date": "20171220", "withCoupon":
+        480, "withoutCoupon": 51}, {"date": "20171221", "withCoupon": 82, "withoutCoupon":
+        1}, {"date": "20171222", "withCoupon": 82, "withoutCoupon": 0}, {"date": "20171223",
+        "withCoupon": 7, "withoutCoupon": 0}, {"date": "20171224", "withCoupon": 243,
+        "withoutCoupon": 0}, {"date": "20171225", "withCoupon": 218, "withoutCoupon":
+        0}, {"date": "20171226", "withCoupon": 277, "withoutCoupon": 0}, {"date":
+        "20171227", "withCoupon": 41, "withoutCoupon": 0}, {"date": "20171228", "withCoupon":
+        110, "withoutCoupon": 0}, {"date": "20171229", "withCoupon": 670, "withoutCoupon":
+        0}, {"date": "20171230", "withCoupon": 96, "withoutCoupon": 0}, {"date": "20171231",
+        "withCoupon": 772, "withoutCoupon": 17}, {"date": "20180101", "withCoupon":
+        1, "withoutCoupon": 0}, {"date": "20180102", "withCoupon": 500, "withoutCoupon":
+        0}, {"date": "20180103", "withCoupon": 2, "withoutCoupon": 0}, {"date": "20180104",
+        "withCoupon": 1, "withoutCoupon": 0}]}, {"hdoServiceCode": "hdo1111111111",
+        "packetLog": [{"date": "20171205", "withCoupon": 0, "withoutCoupon": 0}, {"date":
+        "20171206", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171207", "withCoupon":
+        0, "withoutCoupon": 0}, {"date": "20171208", "withCoupon": 32, "withoutCoupon":
+        0}, {"date": "20171209", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171210",
+        "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171211", "withCoupon": 14,
+        "withoutCoupon": 0}, {"date": "20171212", "withCoupon": 52, "withoutCoupon":
+        0}, {"date": "20171213", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171214",
+        "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171215", "withCoupon": 27,
+        "withoutCoupon": 0}, {"date": "20171216", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20171217", "withCoupon": 6, "withoutCoupon": 0}, {"date": "20171218",
+        "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171219", "withCoupon": 0,
+        "withoutCoupon": 0}, {"date": "20171220", "withCoupon": 41, "withoutCoupon":
+        0}, {"date": "20171221", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171222",
+        "withCoupon": 31, "withoutCoupon": 0}, {"date": "20171223", "withCoupon":
+        9, "withoutCoupon": 0}, {"date": "20171224", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20171225", "withCoupon": 1, "withoutCoupon": 0}, {"date": "20171226",
+        "withCoupon": 44, "withoutCoupon": 0}, {"date": "20171227", "withCoupon":
+        1, "withoutCoupon": 0}, {"date": "20171228", "withCoupon": 0, "withoutCoupon":
+        0}, {"date": "20171229", "withCoupon": 12, "withoutCoupon": 0}, {"date": "20171230",
+        "withCoupon": 0, "withoutCoupon": 0}, {"date": "20171231", "withCoupon": 2,
+        "withoutCoupon": 0}, {"date": "20180101", "withCoupon": 7, "withoutCoupon":
+        0}, {"date": "20180102", "withCoupon": 0, "withoutCoupon": 0}, {"date": "20180103",
+        "withCoupon": 1, "withoutCoupon": 0}, {"date": "20180104", "withCoupon": 500,
+        "withoutCoupon": 0}]}], "plan": "Family Share"}], "returnCode": "OK"}'
+    http_version:
+  recorded_at: Fri, 05 Jan 2018 02:19:54 GMT
+- request:
+    method: put
+    uri: https://api.iijmio.jp/mobile/d/v2/coupon/
+    body:
+      encoding: UTF-8
+      string: '{"couponInfo":[{"hdoInfo":[{"hdoServiceCode":"<CENSORED/>","couponUse":true},{"hdoServiceCode":"<CENSORED/>","couponUse":true},{"hdoServiceCode":"<CENSORED/>","couponUse":true},{"hdoServiceCode":"<CENSORED/>","couponUse":true},{"hdoServiceCode":"<CENSORED/>","couponUse":true}]}]}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.6.0 x86_64) ruby/2.4.1p111
+      X-Iijmio-Developer:
+      - "<CENSORED/>"
+      X-Iijmio-Authorization:
+      - "<CENSORED/>"
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '280'
+      Host:
+      - api.iijmio.jp
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 05 Jan 2018 02:19:54 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-IIJmio-Developer,X-IIJmio-Authorization,X-IIJmio-Application,Content-Type
+      Access-Control-Allow-Methods:
+      - GET,PUT
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"returnCode": "OK"}'
+    http_version:
+  recorded_at: Fri, 05 Jan 2018 02:19:55 GMT
+recorded_with: VCR 4.0.0

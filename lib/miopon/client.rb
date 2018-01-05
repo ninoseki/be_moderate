@@ -9,13 +9,12 @@ module Miopon
   class ParameterError < StandardError; end
 
   class Client
-
     attr_reader :dev_id, :token
 
     def initialize
       @dev_id = ENV["IIJMIO_DEVELOPER_ID"]
       @token = ENV["IIJMIO_AUTHORIZATION"]
-      raise ParameterError unless (@dev_id && @token)
+      raise ParameterError unless @dev_id && @token
     end
 
     def latest_packet_usages

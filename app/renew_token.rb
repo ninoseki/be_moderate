@@ -1,3 +1,4 @@
+require 'dotenv/load'
 require 'uri'
 AUTHORIZATION = "https://api.iijmio.jp/mobile/d/v1/authorization/".freeze
 

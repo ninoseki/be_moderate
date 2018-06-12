@@ -1,6 +1,6 @@
 require_relative "../spec_helper"
 
-describe "Miopon::Utils" do
+describe Miopon::Utils do
   describe "#with_error_notify" do
     include Miopon::Utils
     it "should call Rollbar.error when an exception is thrown" do

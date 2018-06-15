@@ -30,7 +30,7 @@ module Miopon
       @with_coupon = last_day["withCoupon"].to_i
       @packet_usage_limit = ENV["IIJMIO_PACKET_USAGE_LIMIT"].to_i
 
-      raise ParameterError unless @code && @date && @with_coupon
+      raise ArgumentError unless @code && @date && @with_coupon
     end
 
     def coupon_payload

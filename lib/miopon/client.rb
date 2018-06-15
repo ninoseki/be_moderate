@@ -6,15 +6,13 @@ module Miopon
   COUPON = "https://api.iijmio.jp/mobile/d/v2/coupon/".freeze
   PACKET = "https://api.iijmio.jp/mobile/d/v2/log/packet/".freeze
 
-  class ParameterError < StandardError; end
-
   class Client
     attr_reader :dev_id, :token
 
     def initialize
       @dev_id = ENV["IIJMIO_DEVELOPER_ID"]
       @token = ENV["IIJMIO_AUTHORIZATION"]
-      raise ParameterError unless @dev_id && @token
+      raise ArgumentError, "IIJMIO_DEVELOPER_ID & IIJMIO_AUTHORIZATION are required" unless @dev_id && @token
     end
 
     def latest_packet_usages

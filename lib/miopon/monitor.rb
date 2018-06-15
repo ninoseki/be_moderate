@@ -9,7 +9,7 @@ module Miopon
       @packet_usage_limit = ENV["IIJMIO_PACKET_USAGE_LIMIT"].to_i
       @pushbullet_api_key = ENV["PUSHBULLET_API_KEY"]
       @pushbullet_identifier = ENV["PUSHBULLET_IDENTIFIER"]
-      raise ParameterError unless @pushbullet_api_key && @pushbullet_identifier
+      raise ArgumentError, "PUSHBULLET_API_KEY & PUSHBULLET_IDENTIFIER are required" unless @pushbullet_api_key && @pushbullet_identifier
 
       @miopon_client = Client.new
       @pushbullet_client = Washbullet::Client.new(@pushbullet_api_key)
@@ -30,10 +30,8 @@ module Miopon
     end
 
     def stats
-      [].tap do |out|
-        miopon_client.latest_packet_usages.each do |line|
-          out << "#{line.date}: #{line.code} uses #{line.with_coupon}MB"
-        end
+      miopon_client.latest_packet_usages.map do |line|
+        "#{line.date}: #{line.code} uses #{line.with_coupon}MB"
       end
     end
 

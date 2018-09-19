@@ -5,6 +5,9 @@ require 'rspec'
 require 'vcr'
 require 'zlib'
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'sinatra'
 require_relative '../app/main'
 require_relative '../lib/miopon'

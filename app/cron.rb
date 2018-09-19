@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "../lib/miopon"
 
 include Miopon::Utils

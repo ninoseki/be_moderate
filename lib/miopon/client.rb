@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'rest-client'
 require_relative './packet'
 
 module Miopon
-  COUPON = "https://api.iijmio.jp/mobile/d/v2/coupon/".freeze
-  PACKET = "https://api.iijmio.jp/mobile/d/v2/log/packet/".freeze
+  COUPON = "https://api.iijmio.jp/mobile/d/v2/coupon/"
+  PACKET = "https://api.iijmio.jp/mobile/d/v2/log/packet/"
 
   class Client
     attr_reader :dev_id, :token
@@ -42,7 +44,7 @@ module Miopon
     end
 
     def coupon_headers
-      default_headers.merge({ "Content-Type": "application/json" })
+      default_headers.merge("Content-Type": "application/json")
     end
   end
 end

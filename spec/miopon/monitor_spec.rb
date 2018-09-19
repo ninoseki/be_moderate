@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "../spec_helper"
 
 describe Miopon::Monitor, vcr: { cassette_name: "log_packet" } do

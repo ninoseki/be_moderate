@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'dotenv/load'
 require 'uri'
-AUTHORIZATION = "https://api.iijmio.jp/mobile/d/v1/authorization/".freeze
+AUTHORIZATION = "https://api.iijmio.jp/mobile/d/v1/authorization/"
 
 params = {}
 params["response_type"] = "token"

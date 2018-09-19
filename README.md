@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ninoseki/be_moderate.svg?branch=master)](https://travis-ci.org/ninoseki/be_moderate)
 [![Code Climate](https://codeclimate.com/github/ninoseki/be_moderate/badges/gpa.svg)](https://codeclimate.com/github/ninoseki/be_moderate)
+[![Coverage Status](https://coveralls.io/repos/github/ninoseki/be_moderate/badge.svg?branch=master)](https://coveralls.io/github/ninoseki/be_moderate?branch=master)
 
 ## An issue to be solved
 

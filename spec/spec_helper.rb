@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
 require 'dotenv/load'
 require 'mocha'
 require 'rack/test'
 require 'rspec'
 require 'vcr'
 require 'zlib'
+
+require 'coveralls'
+Coveralls.wear!
 
 require 'sinatra'
 require_relative '../app/main'

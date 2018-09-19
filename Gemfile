@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '~> 2.5'
 
 gem 'dalli'
 gem 'dotenv'
@@ -14,6 +16,7 @@ group :test, :development do
 end
 
 group :test do
+  gem 'coveralls', require: false
   gem 'mocha'
   gem "rack-test"
   gem "rspec"

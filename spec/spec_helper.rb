@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'dotenv/load'
 require 'mocha'
 require 'rack/test'
 require 'rspec'
+require 'sinatra'
 require 'vcr'
 require 'zlib'
 
-require 'coveralls'
-Coveralls.wear!
-
-require 'sinatra'
 require_relative '../app/main'
 require_relative '../lib/miopon'
 

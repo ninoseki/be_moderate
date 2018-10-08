@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../spec_helper"
-
 describe Miopon::Utils do
   describe "#with_error_notify" do
     include Miopon::Utils

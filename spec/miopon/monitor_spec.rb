@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../spec_helper"
-
 describe Miopon::Monitor, vcr: { cassette_name: "log_packet" } do
   describe "#check_packet_usages" do
     it "should return violated lines only" do
@@ -16,7 +14,7 @@ describe Miopon::Monitor, vcr: { cassette_name: "log_packet" } do
     end
   end
 
-  describe "use dalli client cases" do
+  context "when using with Dali" do
     before do
       client = mock
       client.expects(:get).returns(nil)
